@@ -1,18 +1,21 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import styles from './menu.module.scss'
 
 const Menu3D = () => {
-    const idStyle = (id:number) => ({ "--i": id }) as React.CSSProperties;
+    const menu = useMemo(()=>{
+        const idStyle = (id:number) => ({ "--i": id }) as React.CSSProperties;
+        return (<ul> {[
+            {id:6, href:'/', caption:'Home'},
+            {id:5, href:'/', caption:'About'},
+            {id:4, href:'/', caption:'Services'},
+            {id:3, href:'/', caption:'Portfolio'},
+            {id:2, href:'/', caption:'Our Team'},
+            {id:1, href:'/', caption:'Contact'},
+        ].map(item=><li style={idStyle(item.id)}><a href={item.href}>{item.caption}</a></li>)}</ul>)
+    }, [])
     return (
         <div className={styles['menu3d']}>
-           <ul>
-               <li style={idStyle(6)}><a href={'/'}>Home</a></li>
-               <li style={idStyle(5)}><a href={'/'}>About</a></li>
-               <li style={idStyle(4)}><a href={'/'}>Services</a></li>
-               <li style={idStyle(3)}><a href={'/'}>Portfolio</a></li>
-               <li style={idStyle(2)}><a href={'/'}>Our Team</a></li>
-               <li style={idStyle(1)}><a href={'/'}>Contact</a></li>
-           </ul>
+            {menu}
         </div>
     );
 };
