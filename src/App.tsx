@@ -5,7 +5,7 @@ import {GlowCheckbox} from "./components/";
 function App() {
   return (
     <div className="App">
-     <GlowCheckbox/>
+     <GlowCheckbox onChange={()=>{console.log('change')}}/>
     </div>
   );
 }
