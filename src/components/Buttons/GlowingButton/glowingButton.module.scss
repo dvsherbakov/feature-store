@@ -51,30 +51,26 @@
       inset: 0;
       display: block;
 
-      &:before {
+      &:before,
+      &:after {
         content: '';
         position: absolute;
         width: 10px;
         height: 5px;
-        top: -3.5px;
-        left: 80%;
         border: 2px solid var(--clr);
         background-color: #27282c;
         transform: translateX(-50%);
         transition: 0.5s;
       }
 
+      &:before {
+        top: -3.5px;
+        left: 80%;
+      }
+
       &:after {
-        content: '';
-        position: absolute;
-        width: 10px;
-        height: 5px;
         bottom: -3.5px;
         left: 20%;
-        border: 2px solid var(--clr);
-        background-color: #27282c;
-        transform: translateX(-50%);
-        transition: 0.5s;
       }
     }
   }
