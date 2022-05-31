@@ -1,13 +1,16 @@
 import React from 'react';
 import './App.css';
-import {Menu3D} from "./components";
+
+import {GlowingButton} from "./components";
+
 
 function App() {
-  return (
-    <div className="App">
-     <Menu3D/>
-    </div>
-  );
+    return (
+        <div className="App">
+            <GlowingButton color={'#1e9bff'} title={'Some title'}/>
+            <GlowingButton color={'#6eff3e'} title={'Other title'}/>
+        </div>
+    );
 }
 
 export default App;

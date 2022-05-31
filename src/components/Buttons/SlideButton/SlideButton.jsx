@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from './button.module.scss'
+import styles from './slideButton.module.scss'
 
- const Button = ({title}) => {
+ const SlideButton = ({title}) => {
     return (<div className={styles['button']}>
         <a href={"/"}  onClick={()=>{}}>
             <span>{title}</span>
@@ -9,4 +9,4 @@ import styles from './button.module.scss'
     </div>)
 }
 
-export default Button
+export default SlideButton
