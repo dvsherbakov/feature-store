@@ -1,16 +1,13 @@
 import React from 'react';
 import './App.css';
 
-import {GlowingButton} from "./components";
+import {AwesomeButtonCheckbox} from "./components";
 
 
 function App() {
-    return (
-        <div className="App">
-            <GlowingButton color={'#1e9bff'} title={'Some title'}/>
-            <GlowingButton color={'#6eff3e'} title={'Other title'}/>
-        </div>
-    );
+    return (<div className="App">
+            <AwesomeButtonCheckbox key={'checkbox'}/>
+        </div>);
 }
 
 export default App;
