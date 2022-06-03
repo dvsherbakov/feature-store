@@ -5,8 +5,8 @@
 
   label {
     position: relative;
-    width: 80px;
-    height: 80px;
+    width: var(--sz);
+    height: var(--sz);
     cursor: pointer;
     border-radius: 50%;
 
