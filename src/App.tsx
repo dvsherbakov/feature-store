@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import {GlowCheckbox} from "./components/";
+
+import {AwesomeButtonCheckbox} from "./components";
+
 
 function App() {
-  return (
-    <div className="App">
-     <GlowCheckbox onChange={()=>{console.log('change')}}/>
-    </div>
-  );
+    return (<div className="App">
+            <AwesomeButtonCheckbox size={60} key={'checkbox'}/>
+        </div>);
 }
 
 export default App;
