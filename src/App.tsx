@@ -1,13 +1,15 @@
 import React from 'react';
 import './App.css';
-
-import {AwesomeButtonCheckbox} from "./components";
+import {LoginForm} from "./components";
+import {CenterViewContainer} from "./components/Containers/CenterViewContainer";
 
 
 function App() {
     return (<div className="App">
-            <AwesomeButtonCheckbox size={60} key={'checkbox'}/>
-        </div>);
+        <CenterViewContainer background={'#1d2b3a'}>
+            <LoginForm/>
+        </CenterViewContainer>
+    </div>);
 }
 
 export default App;
