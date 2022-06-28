@@ -10,7 +10,7 @@ export const LoginForm = () => {
             </div>
             <div className={styles['inputBox']}>
                 <input type={'text'} required={true}/>
-                <span>LastName</span>
+                <span>Last Name</span>
             </div>
         </div>
     );
