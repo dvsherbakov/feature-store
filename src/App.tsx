@@ -10,6 +10,7 @@ import Awesome from "./pages/checkboxes/Awesome";
 import Glow from "./pages/checkboxes/Glow";
 import Kbd from "./pages/kbd/kbd";
 import TestPage from "./pages/Test/TestPage";
+import {ClockPage} from "./pages/clock/clockpage";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
                 <Route path='awesome' element={<Awesome/>}/>
                 <Route path='glow' element={<Glow/>}/>
                 <Route path='kbd' element={<Kbd/>}/>
+                <Route path={'clock'} element={<ClockPage/>}/>
                 <Route path='test' element={<TestPage/>}/>
                 <Route path="*" element={<NoMatch/>}/>
             </Route>
