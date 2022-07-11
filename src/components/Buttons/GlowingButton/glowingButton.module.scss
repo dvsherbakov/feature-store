@@ -6,7 +6,7 @@
   align-items: center;
   font-family: 'Poppins', sans-serif;
 
-  a {
+  button {
     position: relative;
     background-color: #444;
     color: #fff;
@@ -16,6 +16,9 @@
     letter-spacing: 0.1em;
     padding: 10px 30px;
     transition: 0.5s;
+    cursor: pointer;
+    outline: none;
+    border: none;
 
     &:hover {
       letter-spacing: 0.25em;

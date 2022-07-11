@@ -14,8 +14,9 @@
 
   .inputBox {
     position: relative;
-    width: 250px;
+    width: 300px;
     overflow: visible;
+    display: flex;
 
     input {
       width: 100%;

@@ -28,7 +28,7 @@
         top: 10px;
         list-style: none;
         transform-origin: 0 240px;
-        transform: rotate(calc(30deg * var(--i)));
+        transform: rotate(calc(30deg * var(--i) - 5deg));
         font-size: 2.5em;
         font-weight: bold;
         font-family: Consolas, serif;
@@ -36,30 +36,28 @@
         span {
           display: inline-block;
           color: #fff;
-          transform: rotate(calc(-30deg * var(--i)));
+          transform: rotate(calc(-30deg * var(--i) + 5deg));
         }
       }
     }
 
-    &:before {
+    &:before, &:after {
       content: '';
       position: absolute;
-      width: 2px;
-      height: 170px;
       border-radius: 2px;
       background: linear-gradient(0deg, transparent, #fff);
       transform-origin: bottom;
+    }
+
+    &:before {
+      width: 2px;
+      height: 170px;
       animation: animationSec 60s steps(60) infinite;
     }
 
     &:after {
-      content: '';
-      position: absolute;
       width: 4px;
       height: 130px;
-      border-radius: 2px;
-      background: linear-gradient(0deg, transparent, #fff);
-      transform-origin: bottom;
       animation: animationSec 360s steps(60) infinite;
     }
   }
