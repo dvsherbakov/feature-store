@@ -11,6 +11,7 @@ import Glow from "./pages/checkboxes/Glow";
 import Kbd from "./pages/kbd/kbd";
 import TestPage from "./pages/Test/TestPage";
 import {ClockPage} from "./pages/clock/clockpage";
+import {Footer} from "./components";
 
 
 function App() {
@@ -34,8 +35,10 @@ function App() {
 }
 
 function Layout() {
-    return (
-        <Outlet/>
+    return ((<>
+            <Outlet/>
+            <Footer/>
+        </>)
     );
 }
 

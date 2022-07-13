@@ -1,0 +1,16 @@
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+  background-color: transparent;
+
+  a {
+    text-decoration: none;
+
+    svg {
+      transform: scale(0.6);
+    }
+  }
+}

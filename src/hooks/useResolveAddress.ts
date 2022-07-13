@@ -11,7 +11,7 @@ export const useResolveAddress = () =>
                     params: {
                         query: `${lat}, ${lng}`,
                         access_key: process.env.REACT_APP_GEO_API_KEY || "",
-
+                        limit: 5
                     },
                 }
             );

@@ -4,6 +4,7 @@ import Menu3D from "./Menu3D/Menu3D"
 import {AwesomeButtonCheckbox, GlowCheckbox} from './Checkboxes'
 import {LoginForm} from './Forms'
 import {CenterViewContainer} from './Containers'
+import Footer from "./Footer/Footer";
 
 export {
     GlowingButton,
@@ -15,5 +16,6 @@ export {
     Menu3D,
     LoginForm,
     CenterViewContainer,
-    Keyboard
+    Keyboard,
+    Footer
 }
