@@ -73,11 +73,11 @@
 
     @keyframes animationHour {
       0% {
-        transform: translate(-50%, -50%) rotate(calc(0deg + var(--hour) * 30deg))
+        transform: translate(-50%, -50%) rotate(calc(0deg + var(--hour) * 30deg + var(--min) / 2 * 1deg))
       }
 
       100% {
-        transform: translate(-50%, -50%) rotate(calc(360deg + var(--hour) * 30deg))
+        transform: translate(-50%, -50%) rotate(calc(360deg + var(--hour) * 30deg + var(--min) / 2 * 1deg))
       }
     }
 
