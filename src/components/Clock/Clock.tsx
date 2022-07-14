@@ -9,9 +9,13 @@ const Clock = () => {
                 <li key={itm.toString()} style={idStyle(1 + itm)}><span>{1 + itm}</span></li>))}
         </ul>)
     }, [])
+
+    const getTimeStyle = (now: Date = new Date()) =>
+        ({"--min": now.getMinutes(), "--hour": now.getHours() % 12}) as React.CSSProperties
+
     return (
         <div className={styles['container']}>
-            <div className={styles['clock']}>
+            <div className={styles['clock']} style={getTimeStyle()}>
                 {Circle}
             </div>
         </div>

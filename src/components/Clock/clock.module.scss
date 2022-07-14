@@ -52,14 +52,35 @@
     &:before {
       width: 2px;
       height: 170px;
-      animation: animationSec 60s steps(60) infinite;
+      animation: animationMin 3600s steps(60) infinite;
     }
 
     &:after {
       width: 4px;
       height: 130px;
-      animation: animationSec 360s steps(60) infinite;
+      animation: animationHour 43200s steps(60) infinite;
     }
+
+    @keyframes animationMin {
+      0% {
+        transform: translate(-50%, -50%) rotate(calc(0deg + var(--min) * 6deg))
+      }
+
+      100% {
+        transform: translate(-50%, -50%) rotate(calc(360deg + var(--min) * 6deg))
+      }
+    }
+
+    @keyframes animationHour {
+      0% {
+        transform: translate(-50%, -50%) rotate(calc(0deg + var(--hour) * 30deg))
+      }
+
+      100% {
+        transform: translate(-50%, -50%) rotate(calc(360deg + var(--hour) * 30deg))
+      }
+    }
+
   }
 
   &:before {
@@ -74,12 +95,3 @@
 
 }
 
-@keyframes animationSec {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg)
-  }
-
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg)
-  }
-}
