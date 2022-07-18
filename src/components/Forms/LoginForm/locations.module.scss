@@ -1,0 +1,58 @@
+.locations {
+  position: relative;
+  display: flex;
+  width: 300px;
+
+  padding: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
+  margin-bottom: 10px;
+
+
+  .list {
+    color: #6b6b6b;
+    width: 100%;
+    padding-bottom: 4px;
+
+    .listItem {
+      display: flex;
+      padding: 3px;
+      white-space: nowrap;
+      overflow: hidden;
+      cursor: pointer;
+
+      &:hover {
+        overflow: visible;
+        color: #00dfc4;
+        background: #27282c;
+      }
+    }
+
+    .selected {
+      color: #08ff12;
+    }
+  }
+
+  button {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 40px;
+    bottom:-13px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: #1d2b3a;
+    color: #6b6b6b;
+    transform: rotate(90deg);
+    cursor: pointer;
+
+    &:hover {
+      color: #00dfc4;
+      background: #27282c;
+    }
+
+    &:active {
+      transform: scale(.8);
+    }
+  }
+}

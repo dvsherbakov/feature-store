@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+:root {
+
+  --bgr-color: #1d2b3a;
+  --border-color: #00dfc4;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  gap: 30px;
+
+  .inputBox {
+    position: relative;
+    width: 300px;
+    overflow: visible;
+    display: flex;
+
+    input {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: var(--bgr-color);
+      border-radius: 5px;
+      outline: none;
+      color: #fff;
+      font-size: 1em;
+      transition: .5s;
+
+      &:valid, &:focus {
+        border: 1px solid var(--border-color);
+      }
+
+      &:valid ~ span,
+      &:focus ~ span {
+        color: var(--bgr-color);
+        transform: translateX(10px) translateY(-9px);
+        font-size: .8em;
+        padding: 0 10px;
+        background: var(--border-color);
+        border-radius: 2px;
+        letter-spacing: .2em;
+      }
+    }
+
+    span {
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 14px;
+      pointer-events: none;
+      font-size: 1em;
+      color: rgba(255, 255, 255, 0.25);
+      text-transform: uppercase;
+      transition: 0.5s;
+    }
+
+
+  }
+}
