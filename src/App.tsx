@@ -12,6 +12,7 @@ import Kbd from "./pages/kbd/kbd";
 import TestPage from "./pages/Test/TestPage";
 import {ClockPage} from "./pages/clock/clockpage";
 import {Footer} from "./components";
+import {NeonPage} from "./pages/neonPage/neonPage";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
                 <Route path='kbd' element={<Kbd/>}/>
                 <Route path={'clock'} element={<ClockPage/>}/>
                 <Route path='test' element={<TestPage/>}/>
+                <Route path='neon' element={<NeonPage/>}/>
                 <Route path="*" element={<NoMatch/>}/>
             </Route>
 

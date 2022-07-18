@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&display=swap');
+
+.textContainer {
+  overflow: hidden;
+  position: relative;
+  filter: contrast(110%) brightness(190%);
+
+  .neon {
+    position: relative;
+    color: transparent;
+    background: #000;
+    font: 700 220px 'Lato', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+  }
+
+  .gradient {
+
+  }
+
+  .spotlight {
+
+  }
+}
