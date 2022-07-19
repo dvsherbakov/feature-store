@@ -44,19 +44,19 @@ export const LoginForm = () => {
 
     return (<div className={styles['loginForm']}>
         <div className={styles['inputBox']}>
-            <input type={'text'} required={true}/>
+            <input type='text' required={true}/>
             <span>First name</span>
         </div>
         <div className={styles['inputBox']}>
-            <input type={'text'} required={true}/>
+            <input type='text' required={true}/>
             <span>Last Name</span>
         </div>
         <div className={styles['inputBox']}>
-            <input type={'text'} required={true} ref={locationRef}/>
+            <input type='text' required={true} ref={locationRef}/>
             <span>Location</span>
         </div>
         {!!addresses?.length && <LocationsList list={addresses} onSelect={selectLocationHandle}/>}
-        <GlowingButton title={'get location'} color={'#0f3c4a'} key='LocationButton' onClick={buttonHandle}/>
+        <GlowingButton title='get location' color='#0f3c4a' key='LocationButton' onClick={buttonHandle}/>
     </div>);
 };
 

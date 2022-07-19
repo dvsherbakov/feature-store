@@ -8,7 +8,7 @@ const AwesomeButtonCheckbox = ({size = 80}: AwesomeButtonCheckboxProps) => {
     const labelStyle = (size: number) => ({"--sz": `${size}px`}) as React.CSSProperties;
     return (<div className={styles['abCheckbox']}>
         <label style={labelStyle(size)}>
-            <input type={'checkbox'} name={""}/>
+            <input type='checkbox' name=''/>
             <span className={styles['btn']}><FontAwesomeIcon icon={faPowerOff} fontSize={size / 2}/></span>
         </label>
     </div>);

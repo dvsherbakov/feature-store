@@ -26,7 +26,7 @@ function App() {
                 <Route path='awesome' element={<Awesome/>}/>
                 <Route path='glow' element={<Glow/>}/>
                 <Route path='kbd' element={<Kbd/>}/>
-                <Route path={'clock'} element={<ClockPage/>}/>
+                <Route path='clock' element={<ClockPage/>}/>
                 <Route path='test' element={<TestPage/>}/>
                 <Route path='neon' element={<NeonPage/>}/>
                 <Route path="*" element={<NoMatch/>}/>

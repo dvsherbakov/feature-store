@@ -3,8 +3,8 @@ import {CenterViewContainer, CirclesLoader} from "../../components";
 
 const Circles = () => {
     return (<CenterViewContainer background={'#434750'}>
-            <CirclesLoader/>
-        </CenterViewContainer>);
+        <CirclesLoader/>
+    </CenterViewContainer>);
 };
 
 export default Circles;

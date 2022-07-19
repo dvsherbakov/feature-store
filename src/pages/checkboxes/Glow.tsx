@@ -3,8 +3,8 @@ import {CenterViewContainer, GlowCheckbox} from "../../components";
 
 const Glow = () => {
     return (<CenterViewContainer background={'#434750'}>
-            <GlowCheckbox/>
-        </CenterViewContainer>);
+        <GlowCheckbox/>
+    </CenterViewContainer>);
 };
 
 export default Glow;

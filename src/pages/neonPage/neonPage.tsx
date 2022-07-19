@@ -6,7 +6,7 @@ export const NeonPage = () => {
     return (
         <>
             <CenterViewContainer background={'#000'}>
-                <NeonContainer text={'Привет'} size={255}/>
+                <NeonContainer text='Привет' size={255}/>
             </CenterViewContainer>
         </>
     );

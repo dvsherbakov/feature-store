@@ -4,8 +4,8 @@ import {Keyboard} from "../../components/Buttons";
 
 const Kbd = () => {
     return (<CenterViewContainer background={'#232323'}>
-            <Keyboard/>
-        </CenterViewContainer>);
+        <Keyboard/>
+    </CenterViewContainer>);
 };
 
 export default Kbd;
