@@ -28,7 +28,7 @@
         top: 10px;
         list-style: none;
         transform-origin: 0 240px;
-        transform: rotate(calc(30deg * var(--i) - 5deg));
+        transform: rotate(calc(30deg * var(--i) - 4deg));
         font-size: 2.5em;
         font-weight: bold;
         font-family: Consolas, serif;
@@ -36,7 +36,7 @@
         span {
           display: inline-block;
           color: #fff;
-          transform: rotate(calc(-30deg * var(--i) + 5deg));
+          transform: rotate(calc(-30deg * var(--i) + 4deg));
         }
       }
     }
