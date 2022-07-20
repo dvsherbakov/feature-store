@@ -24,3 +24,5 @@ export type TAddress = {
 export type TAddressQuery = {
     data: TAddress[]
 }
+
+export type TImageResult = Blob | null
