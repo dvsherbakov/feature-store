@@ -5,6 +5,8 @@ import {AwesomeButtonCheckbox, GlowCheckbox} from './Checkboxes'
 import {LoginForm} from './Forms'
 import {CenterViewContainer} from './Containers'
 import Footer from "./Footer/Footer";
+import {NeonContainer} from './Text/Neon'
+import {Slider} from "./Slider";
 
 export {
     GlowingButton,
@@ -17,5 +19,7 @@ export {
     LoginForm,
     CenterViewContainer,
     Keyboard,
-    Footer
+    Footer,
+    NeonContainer,
+    Slider
 }
