@@ -4,7 +4,7 @@ import {usePictures} from "../../hooks/usePictures";
 import {CirclesLoader} from "../Loaders";
 
 export const Slider = () => {
-    const pictures = usePictures(8)
+    const pictures = usePictures(5)
     const [position, setPosition] = useState<number>(0)
     const handleLeft = () => {
         if (position > 0) setPosition(pos => --pos)
