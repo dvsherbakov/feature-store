@@ -2,5 +2,30 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
+
+  .viewport {
+    position: relative;
+    display: flex;
+
+    align-items: center;
+    img{
+      border-radius: 1%;
+    }
+    button {
+      color: #fff;
+      position: absolute;
+      background: rgba(15,15,15, 0.3);
+      height: 50%;
+      margin: 15px;
+      outline: none;
+      border: none;
+    }
+    .right {
+      right: 0;
+    }
+
+    .left {
+      left: 0;
+    }
+  }
 }

@@ -1,6 +1,8 @@
 import React from 'react';
-import {Slider} from "../../components";
+import {CenterViewContainer, Slider} from "../../components";
 
 export const SliderPage = () => {
-    return <Slider/>
+    return (<CenterViewContainer background={'#101010'}>
+        <Slider/>
+    </CenterViewContainer>)
 };
