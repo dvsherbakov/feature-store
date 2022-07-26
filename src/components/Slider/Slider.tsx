@@ -7,10 +7,16 @@ export const Slider = () => {
     const pictures = usePictures(8)
     const [position, setPosition] = useState<number>(0)
     const handleLeft = () => {
-        if (position > 0) setPosition(pos => --pos)
+        if (position > 0)
+            setPosition(pos => --pos)
+        else
+            setPosition(pictures.length - 1)
     }
     const handleRight = () => {
-        if (position < pictures.length - 1) setPosition(pos => ++pos)
+        if (position < pictures.length - 1)
+            setPosition(pos => ++pos)
+        else
+            setPosition(0)
     }
     return (<div className={styles['slider']}>
         {!pictures.length && <CirclesLoader/>}
