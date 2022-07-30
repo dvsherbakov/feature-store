@@ -4,9 +4,10 @@ import Menu3D from "./Menu3D/Menu3D"
 import {AwesomeButtonCheckbox, GlowCheckbox} from './Checkboxes'
 import {LoginForm} from './Forms'
 import {CenterViewContainer} from './Containers'
-import Footer from "./Footer/Footer";
-import {NeonContainer} from './Text/Neon'
-import {Slider} from "./Slider";
+import Footer from "./Footer/Footer"
+
+export {Slider} from "./Slider";
+export {NeonContainer, WaterContainer} from './Text'
 
 export {
     GlowingButton,
@@ -20,6 +21,4 @@ export {
     CenterViewContainer,
     Keyboard,
     Footer,
-    NeonContainer,
-    Slider
 }

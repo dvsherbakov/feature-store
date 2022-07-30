@@ -11,7 +11,7 @@ import Glow from "./pages/checkboxes/Glow";
 import Kbd from "./pages/kbd/kbd";
 import TestPage from "./pages/Test/TestPage";
 import {ClockPage} from "./pages/clock/clockpage";
-import {Footer} from "./components";
+import {Footer, WaterContainer} from "./components";
 import {NeonPage} from "./pages/neonPage/neonPage";
 import {SliderPage} from "./pages/slider/SliderPage";
 
@@ -32,6 +32,7 @@ function App() {
                 <Route path='test' element={<TestPage/>}/>
                 <Route path='neon' element={<NeonPage/>}/>
                 <Route path='slider' element={<SliderPage/>}/>
+                <Route path='water' element={<WaterContainer text={'Water'}/>}/>
                 <Route path="*" element={<NoMatch/>}/>
             </Route>
 
