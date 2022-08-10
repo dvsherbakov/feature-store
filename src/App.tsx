@@ -14,6 +14,7 @@ import {ClockPage} from "./pages/clock/clockpage";
 import {Footer, WaterContainer} from "./components";
 import {NeonPage} from "./pages/neonPage/neonPage";
 import {SliderPage} from "./pages/slider/SliderPage";
+import {ColoredFormPage} from "./pages/coloredFormPage/ColoredFormPage";
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
                 <Route path='neon' element={<NeonPage/>}/>
                 <Route path='slider' element={<SliderPage/>}/>
                 <Route path='water' element={<WaterContainer text={'Water'}/>}/>
+                <Route path='colored-form' element={<ColoredFormPage/>}/>
                 <Route path="*" element={<NoMatch/>}/>
             </Route>
 
