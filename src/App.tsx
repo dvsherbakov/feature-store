@@ -15,6 +15,7 @@ import {Footer, WaterContainer} from "./components";
 import {NeonPage} from "./pages/neonPage/neonPage";
 import {SliderPage} from "./pages/slider/SliderPage";
 import {ColoredFormPage} from "./pages/coloredFormPage/ColoredFormPage";
+import {DataPickerPage} from "./pages/dataPicker/DataPickerPage";
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
                 <Route path='slider' element={<SliderPage/>}/>
                 <Route path='water' element={<WaterContainer text={'Water'}/>}/>
                 <Route path='colored-form' element={<ColoredFormPage/>}/>
+                <Route path='dp' element={<DataPickerPage/>}/>
                 <Route path="*" element={<NoMatch/>}/>
             </Route>
 
