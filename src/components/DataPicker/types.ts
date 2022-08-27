@@ -1,10 +1,24 @@
 export enum daysOfWeek {
-    sunday = 'Воскресенье',
-    monday = 'Понедельник',
-    tuesday = 'Вторник',
-    wednesday = 'Среда',
-    thursday = 'Четверг',
-    friday = 'Пятница',
-    saturday = 'Суббота'
+    'Воскресенье',
+    'Понедельник',
+    'Вторник',
+    'Среда',
+    'Четверг',
+    'Пятница',
+    'Суббота'
 }
-export type week = [number, number, number, number, number, number, number]
+
+export enum months {
+    'Январь',
+    'Февраль',
+    'Март',
+    'Апрель',
+    'Май',
+    'Июнь',
+    'Июль',
+    'Август',
+    'Сентябрь',
+    'Октябрь',
+    'Ноябрь',
+    'Декабрь',
+}

@@ -1,19 +1,38 @@
-import React from 'react';
+import React, {useCallback, useState} from 'react';
 import styles from './datapicker.module.scss'
 import {getMonthDays} from "./getMonthDays";
+import {months} from "./types";
 
 export const DataPicker = () => {
-    const month = 7
-    const m = getMonthDays(2021, month)
-    const dataViewer = m.map((itm, idx) => (
-        <div key={idx.toString()}
-             className={[styles['dayViewer'], [itm.getDay() === 0 ? styles['red'] : '']].join(' ')}>
-            {itm.getDate()}
-        </div>))
+    const [month, setMonth] = useState<number>((new Date()).getMonth())
+    const [selectedDate, setSelectedDate] = useState<Date>(new Date())
 
-    return (
-        <div className={styles['dataPicker']}>
-            <div className={styles['dataViewer']}> {dataViewer} </div>
+    const handleNextMonth = useCallback(() => {
+        setMonth(month === 11 ? 0 : (cur) => cur + 1)
+    }, [month])
+
+    const handlePrevMonth = useCallback(() => {
+        setMonth(month === 0 ? 11 : (cur) => cur - 1)
+    }, [month])
+
+    const m = getMonthDays(2022, month)
+
+    const dataViewer = m.map((itm, idx) => (<div key={idx.toString()}
+                                                 className={[styles['dayViewer'],
+                                                     itm.getDay() === 0 ? styles['sunDay'] : '',
+                                                     itm.getMonth() !== month ? styles['vicarious'] : ''].join(' ')}
+                                                 onClick={() => setSelectedDate(itm)}>
+        {itm.getDate()}
+    </div>))
+
+    return (<div className={styles['dataPicker']}>
+        <div className={styles['selectedViewer']}>{selectedDate.toLocaleDateString()}</div>
+        <div className={styles['monthArea']}>
+            <button onClick={handlePrevMonth}>{'<'}</button>
+            {months[month]}
+            <button onClick={handleNextMonth}>{'>'}</button>
         </div>
-    );
+
+        <div className={styles['dataViewer']}> {dataViewer} </div>
+    </div>);
 };
