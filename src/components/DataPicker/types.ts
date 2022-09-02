@@ -22,3 +22,8 @@ export enum months {
     'Ноябрь',
     'Декабрь',
 }
+
+export type TDatePickerProps = {
+    defaultDate?: Date
+    timeout?: number
+}

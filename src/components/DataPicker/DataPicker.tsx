@@ -1,19 +1,19 @@
 import React, {useCallback, useEffect, useState} from "react";
 import styles from "./datapicker.module.scss";
 import {getMonthDays} from "./getMonthDays";
-import {months} from "./types";
-import {FillArrowDown, FillArrowUp} from "../SvgShapes/Shapes";
+import {months, TDatePickerProps} from "./types";
+import {FillArrowDown, FillArrowLeft, FillArrowRight, FillArrowUp} from "../SvgShapes/Shapes";
 
-export const DataPicker = () => {
-    const [month, setMonth] = useState<number>((new Date()).getMonth());
-    const [selectedDate, setSelectedDate] = useState<Date>(new Date());
+export const DataPicker = ({defaultDate = new Date(), timeout = 3}: TDatePickerProps) => {
+    const [month, setMonth] = useState<number>(defaultDate.getMonth());
+    const [selectedDate, setSelectedDate] = useState<Date>(defaultDate);
     const [visible, setVisible] = useState<boolean>(false);
-    const [year, setYear] = useState<number>((new Date()).getFullYear());
+    const [year, setYear] = useState<number>(defaultDate.getFullYear());
 
     useEffect(() => {
-        if (visible) setTimeout(() => {
+        if (visible && timeout) setTimeout(() => {
             setVisible(false);
-        }, 5000);
+        }, timeout * 1000);
     }, [selectedDate]); // eslint-disable-line react-hooks/exhaustive-deps
 
     const handleNextMonth = useCallback(() => {
@@ -47,7 +47,7 @@ export const DataPicker = () => {
     return (<div className={styles["datePicker"]}>
         <div className={styles["selectedViewer"]}>
             {selectedDate.toLocaleDateString()}
-            <button className={styles[visible ? "marked" : ""]} onClick={visibleSwitcher}>{">"}</button>
+            <button onClick={visibleSwitcher}>{visible ? <FillArrowUp/> : <FillArrowDown/>}</button>
         </div>
         {visible && <section>
             <div className={styles["monthYearArea"]}>
@@ -58,9 +58,9 @@ export const DataPicker = () => {
                     </div>
                 </div>
                 <div className={styles["monthArea"]}>
-                    <button onClick={handlePrevMonth}>{"<"}</button>
+                    <button onClick={handlePrevMonth}><FillArrowLeft/></button>
                     {months[month]}
-                    <button onClick={handleNextMonth}>{">"}</button>
+                    <button onClick={handleNextMonth}><FillArrowRight/></button>
                 </div>
             </div>
             <div className={styles["dataViewer"]}> {dataViewer} </div>

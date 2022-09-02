@@ -43,8 +43,17 @@
     button {
       color: var(--color);
       margin: 10px 0;
-      transform: rotate(90deg);
+      padding: 0;
       filter: drop-shadow(0 0 10px #00a1ff) drop-shadow(0 0 50px #00a1ff);
+      outline: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        fill: #00a1ff;
+        transform: scale(0.7);
+      }
     }
 
     .marked {
@@ -70,6 +79,15 @@
 
       button {
         color: #00a1ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+
+        svg {
+          fill: #00a1ff;
+          transform: scale(0.6);
+        }
       }
     }
 
