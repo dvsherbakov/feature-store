@@ -1,0 +1,67 @@
+{
+  "version": 6,
+  "registerSourceHash": "65635431ea2aa33ffaba2280cbe484aa3fc584ba",
+  "components": [
+    {
+      "fullName": "C__Users_dmitriy_scherbakov_WebstormProjects_feature_store_src_components_Buttons_SlideButton_SlideButton_jsx",
+      "importPath": "C:\\Users\\dmitriy.scherbakov\\WebstormProjects\\feature-store\\src\\components\\Buttons\\SlideButton\\SlideButton.jsx",
+      "isModuleOrAlias": false
+    }
+  ],
+  "tests": {
+    "C:\\Users\\dmitriy.scherbakov\\WebstormProjects\\feature-store\\tests-examples\\demo-todo-app.spec.ts": {
+      "timestamp": 1662029602804.5405,
+      "components": []
+    },
+    "C:\\Users\\dmitriy.scherbakov\\WebstormProjects\\feature-store\\src\\components\\Buttons\\SlideButton\\SlideButton.spec.tsx": {
+      "timestamp": 1662034954683.3108,
+      "components": [
+        "C__Users_dmitriy_scherbakov_WebstormProjects_feature_store_src_components_Buttons_SlideButton_SlideButton_jsx"
+      ]
+    },
+    "C:\\Users\\dmitriy.scherbakov\\WebstormProjects\\feature-store\\tests-examples\\SlideButton.spec.tsx": {
+      "timestamp": 1662096049052.729,
+      "components": [
+        "C__Users_dmitriy_scherbakov_WebstormProjects_feature_store_src_components_Buttons_SlideButton_SlideButton_jsx"
+      ]
+    }
+  },
+  "sources": {
+    "C:/Users/dmitriy.scherbakov/WebstormProjects/feature-store/playwright/index.html": {
+      "timestamp": 1662032953386.8381
+    },
+    "C:/Users/dmitriy.scherbakov/WebstormProjects/feature-store/playwright/index.ts": {
+      "timestamp": 1662092771598.5994
+    },
+    "C:/Users/dmitriy.scherbakov/WebstormProjects/feature-store/node_modules/react/index.js": {
+      "timestamp": 499162500000
+    },
+    "C:/Users/dmitriy.scherbakov/WebstormProjects/feature-store/node_modules/react-dom/index.js": {
+      "timestamp": 499162500000
+    },
+    "C:/Users/dmitriy.scherbakov/WebstormProjects/feature-store/src/components/Buttons/SlideButton/SlideButton.jsx": {
+      "timestamp": 1658735601603.6394
+    },
+    "C:/Users/dmitriy.scherbakov/WebstormProjects/feature-store/node_modules/react/cjs/react.production.min.js": {
+      "timestamp": 499162500000
+    },
+    "C:/Users/dmitriy.scherbakov/WebstormProjects/feature-store/node_modules/react/jsx-runtime.js": {
+      "timestamp": 499162500000
+    },
+    "C:/Users/dmitriy.scherbakov/WebstormProjects/feature-store/node_modules/react-dom/cjs/react-dom.production.min.js": {
+      "timestamp": 499162500000
+    },
+    "C:/Users/dmitriy.scherbakov/WebstormProjects/feature-store/node_modules/react/cjs/react-jsx-runtime.production.min.js": {
+      "timestamp": 499162500000
+    },
+    "C:/Users/dmitriy.scherbakov/WebstormProjects/feature-store/node_modules/scheduler/index.js": {
+      "timestamp": 499162500000
+    },
+    "C:/Users/dmitriy.scherbakov/WebstormProjects/feature-store/src/components/Buttons/SlideButton/slideButton.module.scss": {
+      "timestamp": 1658735601603.6394
+    },
+    "C:/Users/dmitriy.scherbakov/WebstormProjects/feature-store/node_modules/scheduler/cjs/scheduler.production.min.js": {
+      "timestamp": 499162500000
+    }
+  }
+}
