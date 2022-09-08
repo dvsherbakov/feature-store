@@ -2,7 +2,7 @@ import React, {useMemo} from "react";
 import styles from "./keyboard.module.scss";
 
 const Keyboard = () => {
-    const rows = useMemo(() => [
+    const rows = useMemo<JSX.Element[]>(() => [
         "qwertyuiop", "asdfghjkl", "zxcvbnm",
     ].map((row, idx) => (<div key={`row_${idx}`}>
             {row.split("").map((btn) => <span key={`key_${btn}`} onClick={() => {
