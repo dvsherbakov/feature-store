@@ -1,9 +1,15 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import {toMatchImageSnapshot} from 'jest-image-snapshot'
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+expect.extend({toMatchImageSnapshot});
+
+describe('App', () => {
+    beforeEach(async () => {
+        await page.goto('http://localhost:3000')
+    })
+
+    it('should match a link with a "Learn React" text inside', async () => {
+        const href = await page.$eval<string, HTMLLinkElement>('.App-link', e => e.innerText)
+        expect(href).toMatch('Learn React')
+    })
+
+})
