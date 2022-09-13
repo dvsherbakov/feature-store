@@ -9,9 +9,9 @@ const Test = () => {
     }
 
     return (<div>
-            <span>{`counter = ${counter}`}</span>
-            <button onClick={handleChange}>change</button>
-        </div>);
+        <span>{`counter = ${counter}`}</span>
+        <button onClick={handleChange}>change</button>
+    </div>);
 };
 
 export default Test;
