@@ -1,20 +1,25 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from '@playwright/test'
 
-test('homepage has Playwright in title and get started link linking to the intro page', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+test('check homepage and login screenshot', async ({ page }) => {
+  await page.goto('http://localhost:3000')
 
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
+  const homeLink = page.locator('text=Home')
+  await expect(homeLink).toHaveAttribute('href', '/')
 
-  // create a locator
-  const getStarted = page.locator('text=Get Started');
+  const loginLink = page.locator('text=Login')
+  await expect(loginLink).toHaveAttribute('href', '/login')
 
-  // Expect an attribute "to be strictly equal" to the value.
-  await expect(getStarted).toHaveAttribute('href', '/docs/intro');
+  await loginLink.click()
 
-  // Click the get started link.
-  await getStarted.click();
+  await expect(page).toHaveScreenshot({ fullPage: true })
+})
 
-  // Expects the URL to contain intro.
-  await expect(page).toHaveURL(/.*intro/);
-});
+test('login fill test', async ({ page }) => {
+  await page.goto('http://localhost:3000/login')
+
+  await page.locator("input[name='firstName']").fill('John')
+  await page.locator("input[name='lastName']").fill('Thmith')
+
+  await page.locator('text=get location').click()
+  
+})
