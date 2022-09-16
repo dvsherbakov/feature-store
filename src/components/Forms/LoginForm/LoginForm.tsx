@@ -44,15 +44,15 @@ export const LoginForm = () => {
 
     return (<div className={styles['loginForm']}>
         <div className={styles['inputBox']}>
-            <input type='text' required={true}/>
+            <input type='text' required={true} name='firstName'/>
             <span>First name</span>
         </div>
         <div className={styles['inputBox']}>
-            <input type='text' required={true}/>
+            <input type='text' required={true} name='lastName'/>
             <span>Last Name</span>
         </div>
         <div className={styles['inputBox']}>
-            <input type='text' required={true} ref={locationRef}/>
+            <input type='text' required={true} ref={locationRef} name='location'/>
             <span>Location</span>
         </div>
         {!!addresses?.length && <LocationsList list={addresses} onSelect={selectLocationHandle}/>}
