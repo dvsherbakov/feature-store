@@ -8,8 +8,9 @@ import {
   FillArrowRight,
   FillArrowUp,
 } from '../SvgShapes/Shapes'
+import {CustomInput} from "./CustomInput";
 
-export const DataPicker = ({
+export const DatePicker = ({
   defaultDate = new Date(),
   timeout = 3,
 }: TDatePickerProps) => {
@@ -64,7 +65,7 @@ export const DataPicker = ({
   return (
     <div className={styles['datePicker']}>
       <div className={styles['selectedViewer']}>
-        {selectedDate.toLocaleDateString()}
+        <CustomInput value={selectedDate} />
         <button onClick={visibleSwitcher}>
           {visible ? <FillArrowUp /> : <FillArrowDown />}
         </button>

@@ -9,7 +9,7 @@ export { LoginForm } from './Forms'
 export { Slider } from './Slider'
 export { NeonContainer, WaterContainer } from './Text'
 export { ColoredForm } from './Forms'
-export { DataPicker } from './DataPicker'
+export { DatePicker } from './DatePicker'
 
 export {
   GlowingButton,
