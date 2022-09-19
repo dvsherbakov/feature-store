@@ -1,21 +1,35 @@
-import React, {useMemo} from "react";
-import styles from "./keyboard.module.scss";
+import React, { useMemo } from 'react'
+import styles from './keyboard.module.scss'
 
-const Keyboard = () => {
-    const rows = useMemo<JSX.Element[]>(() => [
-        "qwertyuiop", "asdfghjkl", "zxcvbnm",
-    ].map((row, idx) => (<div key={`row_${idx}`}>
-            {row.split("").map((btn) => <span key={`key_${btn}`} onClick={() => {
-                console.log(btn);
-            }}><i>{btn}</i></span>)}
-        </div>),
-    ), []);
+type ComponentProps = {
+  onKeyPress?: (sym: string) => void,
+}
 
-    return (
-        <div className={styles["keyboard"]}>
-            {rows}
+const Keyboard = ({
+  onKeyPress = s => {
+    console.log(s)
+  },
+}: ComponentProps) => {
+  const rows = useMemo<JSX.Element[]>(
+    () =>
+      ['qwertyuiop', 'asdfghjkl', 'zxcvbnm'].map((row, idx) => (
+        <div key={`row_${idx}`}>
+          {row.split('').map(btn => (
+            <span
+              key={`key_${btn}`}
+              onClick={() => {
+                onKeyPress(btn)
+              }}
+            >
+              <i>{btn}</i>
+            </span>
+          ))}
         </div>
-    );
-};
+      )),
+    [onKeyPress]
+  )
 
-export default Keyboard;
+  return <div className={styles['keyboard']}>{rows}</div>
+}
+
+export default Keyboard
