@@ -8,7 +8,7 @@ import {
   FillArrowRight,
   FillArrowUp,
 } from '../SvgShapes/Shapes'
-import {CustomInput} from "./CustomInput";
+import { CustomInput } from './CustomInput'
 
 export const DatePicker = ({
   defaultDate = new Date(),
