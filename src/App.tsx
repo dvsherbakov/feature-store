@@ -16,6 +16,7 @@ import { NeonPage } from './pages/neonPage/neonPage'
 import { SliderPage } from './pages/slider/SliderPage'
 import { ColoredFormPage } from './pages/coloredFormPage/ColoredFormPage'
 import { DataPickerPage } from './pages/dataPicker/DataPickerPage'
+import { CubesPage } from './pages/cubesPage/CubesPage'
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path='water' element={<WaterContainer text={'Water'} />} />
           <Route path='colored-form' element={<ColoredFormPage />} />
           <Route path='dp' element={<DataPickerPage />} />
+          <Route path='cubes' element={<CubesPage />} />
           <Route path='*' element={<NoMatch />} />
         </Route>
       </Routes>

@@ -10,6 +10,7 @@ export { Slider } from './Slider'
 export { NeonContainer, WaterContainer } from './Text'
 export { ColoredForm } from './Forms'
 export { DatePicker } from './DatePicker'
+export { Cubes } from './Cubes'
 
 export {
   GlowingButton,
