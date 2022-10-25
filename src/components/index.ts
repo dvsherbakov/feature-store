@@ -13,6 +13,7 @@ export {DatePicker} from './DatePicker'
 export {Cubes} from './Cubes'
 export {PercentCard} from './Card'
 export {SimplePercentCard} from './Card'
+export {SvgBar} from './SvgBar'
 
 export {
     GlowingButton,

@@ -1,0 +1,15 @@
+.svgBar{
+  display:flex;
+  flex-direction: column;
+
+  svg{
+    border: 2px solid #c0c0c0;
+    background-color: #cbcbcb;
+    path {
+      stroke-width: 3;
+      stroke: #325EEF;
+      fill-opacity: .35;
+      fill: #f75d64;
+    }
+  }
+}
