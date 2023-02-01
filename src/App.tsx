@@ -17,6 +17,7 @@ import { SliderPage } from './pages/slider/SliderPage'
 import { ColoredFormPage } from './pages/coloredFormPage/ColoredFormPage'
 import { DataPickerPage } from './pages/dataPicker/DataPickerPage'
 import { CubesPage } from './pages/cubesPage/CubesPage'
+import BowlPage from './pages/bowl/BowlPage'
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path='colored-form' element={<ColoredFormPage />} />
           <Route path='dp' element={<DataPickerPage />} />
           <Route path='cubes' element={<CubesPage />} />
+          <Route path='bowl' element={<BowlPage />} />
           <Route path='*' element={<NoMatch />} />
         </Route>
       </Routes>
