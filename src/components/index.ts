@@ -3,6 +3,7 @@ import Footer from './Footer/Footer'
 
 export { AwesomeButtonCheckbox, GlowCheckbox } from './Checkboxes'
 export { CirclesLoader, InfinityLoader } from './Loaders'
+export { CircularProgressBar } from './CircularProgressBar'
 export { GlowingButton, Keyboard, SlideButton } from './Buttons'
 export { Bowl } from './Bowl'
 export { CenterViewContainer } from './Containers'

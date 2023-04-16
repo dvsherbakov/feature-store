@@ -20,6 +20,7 @@ import { CubesPage } from './pages/cubesPage/CubesPage'
 import BowlPage from './pages/bowl/BowlPage'
 import { GlowCubePage } from './pages/glowCube/GlowCubePage'
 import { PineAnimatePage } from './pages/pineAnimatePage/pineAnimatePage'
+import { CircularProgressPage } from './pages/circularProgress/circularProgressPage'
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
           <Route path='glow-cube' element={<GlowCubePage />} />
           <Route path='bowl' element={<BowlPage />} />
           <Route path='pine' element={<PineAnimatePage />} />
+          <Route path='cpb' element={<CircularProgressPage />} />
           <Route path='*' element={<NoMatch />} />
         </Route>
       </Routes>

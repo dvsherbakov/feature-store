@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  font-family: Poppins, sans-serif;
+
+  .progress {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    color: #fff;
+    background: #444 linear-gradient(to right, transparent 50%, var(--clr) 0);
+
+
+    h3 {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2.5em;
+      z-index: 1;
+      font-weight: 500;
+
+      span {
+        font-size: .65em;
+        font-weight: 400;
+      }
+    }
+
+    h4 {
+      position: absolute;
+      margin: 0;
+      top: 62%;
+      left: 50%;
+      transform: translate(-50%);
+      z-index: 1;
+      color: var(--clr);
+      text-transform: uppercase;
+
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      height: 100%;
+      margin-left: 50%;
+      transform-origin: left;
+      border-radius: 0 100% 100% 0/50%;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 10px;
+      border-radius: 50%;
+      background: #222;
+    }
+
+    &::before {
+      background: var(--clr);
+      transform: rotate(calc(((var(--i) - 50) * 0.01turn)))
+    }
+  }
+}
+
+.container .progress.less::before {
+  background: #444;
+  transform: rotate(calc(((var(--i) - 0) * 0.01turn)))
+}
