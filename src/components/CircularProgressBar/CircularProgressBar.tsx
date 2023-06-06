@@ -1,35 +1,26 @@
-import React from "react";
+import React, {useCallback} from "react";
 import styles from "./bar.module.scss";
 
 export const CircularProgressBar = () => {
-  const numStyle = (num: number, color: string) => ({ "--i": num, "--clr": color }) as React.CSSProperties;
 
-  return (
-    <div className={styles["container"]}>
-      <div className={styles["progress"]} style={numStyle(85, "#43f94a")}>
-        <h3>
-          85<span>%</span>
-        </h3>
-        <h4>Html</h4>
-      </div>
-      <div className={styles["progress"]} style={numStyle(62, "#2ccde9")}>
-        <h3>
-          62<span>%</span>
-        </h3>
-        <h4>CSS</h4>
-      </div>
-      <div className={`${styles["progress"]} ${styles["less"]}`} style={numStyle(35, "#fb297b")}>
-        <h3>
-          35<span>%</span>
-        </h3>
-        <h4>JavaScript</h4>
-      </div>
-      <div className={styles["progress"]} style={numStyle(78, "#ffe047")}>
-        <h3>
-          78<span>%</span>
-        </h3>
-        <h4>Photoshop</h4>
-      </div>
-    </div>
-  );
+    const card = useCallback((percent: number, text: string, color: string) => {
+        const numStyle = (num: number, color: string) => ({"--i": num, "--clr": color}) as React.CSSProperties;
+
+        const st = [styles["progress"], percent < 50 ? styles["less"] : ''].join(' ')
+        return (<div className={st} style={numStyle(percent, color)}>
+            <h3>
+                {percent}<span>%</span>
+            </h3>
+            <h4>{text}</h4>
+        </div>)
+    }, [])
+
+    return (
+        <div className={styles["container"]}>
+            {card(85, 'Html', "#43f94a")}
+            {card(63, 'SCC', "#2ccde9")}
+            {card(35, 'JavaScript', "#fb297b")}
+            {card(78, 'Dart', "#ffe047")}
+        </div>
+    );
 };
