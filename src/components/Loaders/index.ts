@@ -1,4 +1,6 @@
 import InfinityLoader from './Infinity/Loader'
-import {CirclesLoader} from './Circles/CirclesLoader'
 
-export {InfinityLoader, CirclesLoader}
+export { PixelsLoader } from './Pixels/PixelsLoader'
+export { CirclesLoader } from './Circles/CirclesLoader'
+
+export { InfinityLoader }

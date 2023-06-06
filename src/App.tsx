@@ -21,6 +21,7 @@ import BowlPage from './pages/bowl/BowlPage'
 import { GlowCubePage } from './pages/glowCube/GlowCubePage'
 import { PineAnimatePage } from './pages/pineAnimatePage/pineAnimatePage'
 import { CircularProgressPage } from './pages/circularProgress/circularProgressPage'
+import Pixels from './pages/loaders/Pixels'
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path='login' element={<Login />} />
           <Route path='circles' element={<Circles />} />
+          <Route path='pixels' element={<Pixels />} />
           <Route path='infinity' element={<Infinity />} />
           <Route path='awesome' element={<Awesome />} />
           <Route path='glow' element={<Glow />} />
