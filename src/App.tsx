@@ -22,6 +22,7 @@ import { GlowCubePage } from './pages/glowCube/GlowCubePage'
 import { PineAnimatePage } from './pages/pineAnimatePage/pineAnimatePage'
 import { CircularProgressPage } from './pages/circularProgress/circularProgressPage'
 import Pixels from './pages/loaders/Pixels'
+import {SolarSystem} from "./pages/SolarSystem/SolarSystem";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
           <Route path='bowl' element={<BowlPage />} />
           <Route path='pine' element={<PineAnimatePage />} />
           <Route path='cpb' element={<CircularProgressPage />} />
+          <Route path='solar' element={<SolarSystem/>} />
           <Route path='*' element={<NoMatch />} />
         </Route>
       </Routes>

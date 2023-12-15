@@ -18,5 +18,5 @@ export { SimplePercentCard } from './Card'
 export { SvgBar } from './SvgBar'
 export { GlowCube } from './GlowCube'
 export { PineAnimation } from './PineAnimation'
-
+export { SolarSystemComponent } from './SolarSystem'
 export { Menu3D, Footer }
