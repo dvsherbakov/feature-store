@@ -19,4 +19,5 @@ export { SvgBar } from './SvgBar'
 export { GlowCube } from './GlowCube'
 export { PineAnimation } from './PineAnimation'
 export { SolarSystemComponent } from './SolarSystem'
+export {Spinner} from './Spiner'
 export { Menu3D, Footer }
