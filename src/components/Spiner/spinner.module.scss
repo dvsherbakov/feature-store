@@ -74,3 +74,14 @@
     rotate: 30deg;
   }
 }
+
+.container::before{
+  position: absolute;
+  content: '';
+  top: 35pt;
+  width: 30pt;
+  height: 50pt;
+  background: #f43648;
+  z-index: 16;
+  clip-path: polygon(50% 0%, 65% 50%, 50% 100%, 35% 50%);
+}
